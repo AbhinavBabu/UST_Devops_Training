@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: samplepod
+  namespace: qa
+spec:
+  containers:
+    - name: sample
+      image: rajcosivadevops/ustimage:latest
+      ports:
+        - containerPort: 80
