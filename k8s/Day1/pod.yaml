@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testpod
+  labels:
+    app: ustimage
+spec:
+  containers:
+    - name: test
+      image: rajcosivadevops/ustimage:latest
+      ports:
+        - containerPort: 80
