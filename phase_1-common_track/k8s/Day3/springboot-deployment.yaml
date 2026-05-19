@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mono-spring
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: monoapp
+  template:
+    metadata:
+      name: monopod
+      labels:
+        app: monoapp
+    spec:
+      containers:
+        - name: monoapp
+          image: cazzzzz/mono-withstage
+          ports:
+            - containerPort: 8080
